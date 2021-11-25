@@ -13,6 +13,11 @@
 		{
 			$this->view->LoadDesign();
 		}
+
+		public function PanelAction()
+		{
+			$this->view->LoadDesign();
+		}
 	}
 
 ?>

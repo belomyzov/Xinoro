@@ -13,7 +13,7 @@
 
 		'admin/panel' => [
 			'controller' => 'Admin',
-			'action' => 'AdminLogin',
+			'action' => 'Panel',
 		],
 
 		/*
