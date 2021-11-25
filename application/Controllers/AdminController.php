@@ -16,6 +16,15 @@
 
 		public function PanelAction()
 		{
+			if(isset($_POST["createPageBtn"]))
+			{
+				$receivedFolder = strip_tags($_POST['folder']);
+				$receivedController = strip_tags($_POST['controller']);
+				$receivedAction  = strip_tags($_POST['action']);
+
+				$this->model->CreatePage($receivedFolder,$receivedController,$receivedAction);
+			}
+
 			$this->view->LoadDesign();
 		}
 	}

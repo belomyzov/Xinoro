@@ -1,30 +1,27 @@
 <?php 
 
-	// Запуск session
 	session_start();
 
 	class session
 	{
-		static function isAuth()
+		static function isAuth($authParams)
 		{
-			if(isset($_SESSION["isAuth"]))
+			if(isset($_SESSION[$authParams]))
 			{
-				return $_SESSION["isAuth"];
+				return $_SESSION[$authParams];
 			}
 			else return false;
 		}
 
-		static function authorization($login)
+		static function authorization($isAdminAuth = false)
 		{
-			$_SESSION["isAuth"] = true;
-			$_SESSION["login"] = $login;
+			$_SESSION["isAdminAuth"] = $isAdminAuth;
 		}
 
 		static function getDate()
 		{
 			return [
-				"isAuth" => $_SESSION["isAuth"],
-				"login" => $_SESSION["login"],
+				"isAdminAuth" => $_SESSION["isAdminAuth"],
 			];
 		}
 

@@ -1,3 +1,8 @@
+<?php 
+	if(session::isAuth("isAdminAuth"))
+		header("Location: panel");
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,6 +34,7 @@
 							}
 							else
 							{
+								session::authorization($isAdminAuth = true);
 								return header("Location: panel");
 							}
 						}

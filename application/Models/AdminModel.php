@@ -24,5 +24,13 @@
 			}
 			return "Wrong login";
 		}
+
+		public function CreatePage($receivedFolder,$receivedController,$receivedAction)
+		{
+			file_put_contents('vendor/css/'.$receivedAction.'.css', "");
+			file_put_contents('application/Controllers/'.$receivedController.'.php', getRaw("cms_vendor/template","cphp.txt"));
+			file_put_contents('application/Models/'.$receivedController.'.php', getRaw("cms_vendor/template","model.txt"));
+			file_put_contents('application/Views/'.$receivedFolder.'/'.$receivedAction.'.php', getRaw("cms_vendor/template","php.txt"));
+		}
 	}	
 ?>

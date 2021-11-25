@@ -1,0 +1,15 @@
+<?php 
+
+	/*
+		Controller
+		by xoheveras(Egor Udovin)
+		https://github.com/xoheveras/CMS
+	
+	*/
+
+	class <YouName>Controller extends Controller 
+	{
+	
+	}
+
+?>
