@@ -3,23 +3,137 @@
       padding: 0px;
 }
 
-body{
-      display:flex;
-}
-
-.left-menu{
+.menu{
       background-color: #6393DC;
-      width: 110px;
-      height: 100vh;
 }
 
-.left-menu img {
-      padding-left: 13px;
+.menu img {
+      padding-left: 7px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+}
+
+.content
+{
+}
+
+.routes p
+{
+      margin-left: 30px;
+      margin-top: 10px;
       padding-top: 10px;
 }
 
-.them-box{
-      width: 20%;
-      height: 100vh;
-      background-color: red;
+.content textarea
+{
+      width: 535px;
+      height: 290px;
+
+      font-size: 15px;
+}
+
+.datebas p, textarea
+{
+      margin-left: 30px;
+      margin-top: 10px;
+      padding-top: 10px;
+}
+
+.box
+{
+      width: 599px;
+      height: 359px;
+
+      margin-top: 20px;
+      margin-left: 20px;
+
+      background: #FFFFFF;
+      box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 26px;
+
+
+      color: #706F6F;
+
+}
+
+.select
+{
+      display: grid;
+      grid-template-areas: "select";
+      align-items: center;
+      position: relative;
+
+      select,
+      &::after 
+      {
+            grid-area: select;
+      }
+
+      min-width: 15ch;
+
+      border: 1px solid var(--select-border);
+      border-radius: 0.25em;
+      padding: 0.25em 0.5em;
+
+      font-size: 1.25rem;
+      cursor: pointer;
+      line-height: 1.1;
+
+      background-color: #fff;
+      background-image: white;
+
+      &:not(.select--multiple)::after {
+            content: "";
+            justify-self: end;
+            width: 0.8em;
+            height: 0.5em;
+            background-color: var(--select-arrow);
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      }
+}
+
+select 
+{
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: auto;
+  font-size: 15px;
+  cursor: inherit;
+  line-height: inherit;
+
+  z-index: 1;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  outline: none;
+}
+
+.newselect:focus
+{
+      border: none;
+}
+
+.selectfile{
+      width: auto;
+      height: auto;
+      margin-bottom: 20px;
+
+      display: flex;
+}
+
+.editorfile textarea{
+      width: 450px;
+      height: 360px;
+      margin-left: 5px;
 }

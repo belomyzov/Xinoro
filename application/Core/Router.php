@@ -15,7 +15,7 @@
 			}
 
 			$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-			if (strpos($path, '.png') !== false || strpos($path, '.jpg') !== false || strpos($path, '.gif') !== false) 
+			if (strpos($path, '.png') !== false || strpos($path, '.jpg') !== false || strpos($path, '.gif') !== false || strpos($path, '.js') !== false) 
 			{
 				$path = $this->getPath();
 				echo file_get_contents($path);
