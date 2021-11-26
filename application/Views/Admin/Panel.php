@@ -35,7 +35,7 @@
 		</div>
 
 		<style type="text/css"> 
-			<?php echo file_get_contents("cms_vendor/css/panel.css") ?>
+			<?php echo getRaw("css","panel.css"); ?>
 		</style>
 	</body>
 </html>
