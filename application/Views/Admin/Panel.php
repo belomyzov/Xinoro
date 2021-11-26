@@ -7,14 +7,21 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<title>Панель администратора</title>
 	</head>
-	<body class="blackNoback">
+	<body class="">
 
-		<div class="menu blackback">
-			<a href="../"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/vendor/image/logowhite.png"></a>
+		<div class="Menu-box">
+			<div class="Menu-item-box">
+				<a href="../"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/vendor/image/logo.png"></a>
+				<ul>
+					<li><a href="../admin/panel"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/stats-chart.png"></a></li>
+					<li><a href="../admin/pages"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/document-sharp.png"></a></li>
+					<li><a href="../admin/setting"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/hammer-sharp.png"></a></li>
+				</ul>
+			</div>
 		</div>
 
 		<style type="text/css"> 
-			<?php echo getRaw("css","panel.css"); ?>
+			<?php echo file_get_contents("cms_vendor/css/panel.css") ?>
 		</style>
 	</body>
 </html>
