@@ -191,3 +191,14 @@ select
 {
       outline: none;
 }
+
+.blackback
+{
+     background-color: #161B22;
+     color: #FFFFFF;
+}
+
+.blackNoback
+{
+     background-color: #0D1117;
+}
