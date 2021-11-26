@@ -28,9 +28,24 @@
 		public function CreatePage($receivedFolder,$receivedController,$receivedAction)
 		{
 			file_put_contents('vendor/css/'.$receivedAction.'.css', "");
-			file_put_contents('application/Controllers/'.$receivedController.'.php', getRaw("cms_vendor/template","cphp.txt"));
-			file_put_contents('application/Models/'.$receivedController.'.php', getRaw("cms_vendor/template","model.txt"));
-			file_put_contents('application/Views/'.$receivedFolder.'/'.$receivedAction.'.php', getRaw("cms_vendor/template","php.txt"));
+
+
+			$getFile = getRaw("template","controlphp.txt");
+			str_replace("#name#",$receivedController."Controller",$getFile);
+			file_put_contents('application/Controllers/'.$receivedController.'.php', $getFile);
+
+			$getFile = getRaw("template","model.txt");
+			str_replace("#name#",$receivedController."Model",$getFile);
+			file_put_contents('application/Models/'.$receivedController.'.php', $getFile);
+
+			if(!is_dir("application/Views/".$receivedFolder))
+			{
+				mkdir("application/Views/".$receivedFolder);
+			}
+
+			$getFile = getRaw("template","php.txt");
+			str_replace("#name#",$receivedAction,$getFile);
+			file_put_contents('application/Views/'.$receivedFolder.'/'.$receivedAction.'.php', $getFile);
 		}
 	}	
 ?>

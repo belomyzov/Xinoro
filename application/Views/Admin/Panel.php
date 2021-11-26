@@ -11,12 +11,26 @@
 
 		<div class="Menu-box">
 			<div class="Menu-item-box">
-				<a href="../"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/vendor/image/logo.png"></a>
+				<a href="../"><img class="logo" src="https://raw.githubusercontent.com/xoheveras/CMS/main/vendor/image/logocms.png"></a>
 				<ul>
 					<li><a href="../admin/panel"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/stats-chart.png"></a></li>
 					<li><a href="../admin/pages"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/document-sharp.png"></a></li>
 					<li><a href="../admin/setting"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/hammer-sharp.png"></a></li>
 				</ul>
+			</div>
+		</div>
+		<div class="item-box">
+			<div class="info-box">
+				<div class="info-box-box">
+					<p class="first-text"><?php echo count(searchPHP()) + + count(searchStyleAndJs("css")) + count(searchStyleAndJs("js")); ?></p>
+					<p class="sub-text">Кол-во страниц</p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div class="info-box-box">
+					<p class="first-text">cms v0.1</p>
+					<p class="sub-text">Последняя версия</p>
+				</div>
 			</div>
 		</div>
 

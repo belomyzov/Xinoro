@@ -28,10 +28,10 @@
 	}
 	
 	# Search for files that are responsible for page styles
-	function searchCSS()
+	function searchStyleAndJs($type)
 	{
 		$cssFileList = [];
-		foreach (scandir("vendor/css") as $key => $value) 
+		foreach (scandir("vendor/".$type) as $key => $value) 
 		{
 			if(!($value == '.' || $value == '..'))
 			{

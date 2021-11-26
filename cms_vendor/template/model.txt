@@ -1,13 +1,13 @@
 <?php 
 
 	/*
-		Model
+		#name#
 		by xoheveras(Egor Udovin)
 		https://github.com/xoheveras/CMS
 	
 	*/
 
-	class <YouName>Model extends Model
+	class #name# extends Model
 	{
 
 	}	

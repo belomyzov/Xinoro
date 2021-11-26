@@ -1,3 +1,7 @@
+<!--  <?php foreach (searchPHP() as $key => $value) { echo "<option>".$value."</option>"; } ?>
+
+<?php echo getRaw("css","panel.css"); ?>
+-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,62 +11,54 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<title>Панель администратора</title>
 	</head>
-	<body>
+	<body class="">
 
-		<div class="menu">
-			<a href="../"><img src="../vendor/image/logowhite.png"></a>
-			<input class="create-btn" type="submit" name="createPageBtn" value="Сохранить всё"/>
+		<div class="Menu-box">
+			<div class="Menu-item-box">
+				<a href="../"><img class="logo" src="https://raw.githubusercontent.com/xoheveras/CMS/main/vendor/image/logocms.png"></a>
+				<ul>
+					<li><a href="../admin/panel"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/stats-chart.png"></a></li>
+					<li><a href="../admin/pages"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/document-sharp.png"></a></li>
+					<li><a href="../admin/setting"><img src="https://raw.githubusercontent.com/xoheveras/CMS/main/cms_vendor/image/hammer-sharp.png"></a></li>
+				</ul>
+			</div>
 		</div>
-
-		<div class="blocks">
-			<div class="content">
-				<div class="routes box">
-					<p>Routes</p>
-					 <textarea id="routes"> <?php echo file_get_contents("application/Config/Routes.php"); ?></textarea>
-				</div>
-				<div class="routes box">
-					<p>DateBase</p>
-					<textarea id="datebase"><?php echo file_get_contents("application/Config/db.php"); ?></textarea>
-				</div>
-				<div class="routes box">
-					<p>Session</p>
-					<textarea id="datebase"><?php echo file_get_contents("application/Lib/session.php"); ?></textarea>
+		<div class="item-box">
+			<div class="info-box-file">
+				<div class="info-box-box">
+					<p class="sub-text">Файлы проекта</p>
+					<select size="24">
+						<?php 
+							foreach (searchPHP() as $key => $value) { echo "<option>".$value."</option>"; } 
+							echo "<option></option>";
+							foreach (searchStyleAndJs("css") as $key => $value) { echo "<option>".$value."</option>"; }
+							echo "<option></option>";
+							foreach (searchStyleAndJs("js") as $key => $value) { echo "<option>".$value."</option>"; }
+						?>
+					</select>
 				</div>
 			</div>
-
-			<div class="editor-file">
-				<div class="selectfile box">
-					<div class="left-select-box">
-						<div class="select">
-							<select class="newselect" size="10">
-								<?php foreach (searchPHP() as $key => $value) { echo "<option>".$value."</option>"; } ?>
-							</select>
-						</div>
-						<div class="select">
-							<select size="10">
-								<?php foreach (searchCSS() as $key => $value) { echo "<option>".$value."</option>"; } ?>
-							</select>
-						</div>
-					</div>
-					<div class="editorfile">
-						<textarea id="editorfile"></textarea>
-					</div>
-				</div>
-
-				<div class="routes">
-					<form action="panel" method="POST">
-						<p class="text">Add new page</p>
-						<p><input class="text-field__input text" type="text" name="folder" required placeholder="folder"></p>
-						<p><input class="text-field__input text" type="text" name="controller" required placeholder="controller"></p>
-						<p><input class="text-field__input text" type="text" name="action" required placeholder="action"></p>
-						<input class="create-btn" type="submit" name="createPageBtn" value="Создать"/>
-					</form>
-				</div>
+			<div class="info-box-form">
+				<form action="pages" method="post">
+					<p class="sub-text">Создание страниц</p>
+					<input class="text-form" type="text" name="folder" placeholder="Folder">
+					<input class="text-form" type="text" name="controller" placeholder="Controller">
+					<input class="text-form" type="text" name="action" placeholder="Action">
+					<input class="save-btn" style="margin-top: 185px;" type="submit" name="createPageBtn" value="Сохранить">
+				</form>
+			</div>
+		</div>
+		<div class="editor-box">
+			<div class="info-box-editor">
+				<form>
+					<textarea></textarea>
+					<input class="save-btn" type="submit" name="" value="Сохранить">
+				</form>
 			</div>
 		</div>
 
 		<style type="text/css"> 
-			<?php echo getRaw("css","panel.css"); ?>
+			<?php echo file_get_contents("cms_vendor/css/pages.css") ?>
 		</style>
 	</body>
 </html>
