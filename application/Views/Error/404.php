@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="info-box">
-			<p><img align="center" src="vendor/image/logocms.png"></p>
+			<p><img align="center" src="https://raw.githubusercontent.com/xoheveras/CMS/main/vendor/image/logocms.png"></p>
 			<p>Ой, ошибка 404<br>похоже вашу страницу съели бобры</p>
 		</div>
 	</body>
