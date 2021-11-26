@@ -28,24 +28,13 @@
 		public function CreatePage($receivedFolder,$receivedController,$receivedAction)
 		{
 			file_put_contents('vendor/css/'.$receivedAction.'.css', "");
-
-
-			$getFile = getRaw("template","controlphp.txt");
-			str_replace("#name#",$receivedController."Controller",$getFile);
-			file_put_contents('application/Controllers/'.$receivedController.'.php', $getFile);
-
-			$getFile = getRaw("template","model.txt");
-			str_replace("#name#",$receivedController."Model",$getFile);
-			file_put_contents('application/Models/'.$receivedController.'.php', $getFile);
-
+			file_put_contents('application/Controllers/'.$receivedController.'.php', getRaw("template","controlphp.txt"));
+			file_put_contents('application/Models/'.$receivedController.'.php', getRaw("template","model.txt"));
 			if(!is_dir("application/Views/".$receivedFolder))
 			{
 				mkdir("application/Views/".$receivedFolder);
 			}
-
-			$getFile = getRaw("template","php.txt");
-			str_replace("#name#",$receivedAction,$getFile);
-			file_put_contents('application/Views/'.$receivedFolder.'/'.$receivedAction.'.php', $getFile);
+			file_put_contents('application/Views/'.$receivedFolder.'/'.$receivedAction.'.php', getRaw("template","php.txt"));
 		}
 	}	
 ?>

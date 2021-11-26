@@ -41,9 +41,9 @@
 			<div class="info-box-form">
 				<form action="pages" method="post">
 					<p class="sub-text">Создание страниц</p>
-					<input class="text-form" type="text" name="folder" placeholder="Folder">
-					<input class="text-form" type="text" name="controller" placeholder="Controller">
-					<input class="text-form" type="text" name="action" placeholder="Action">
+					<input class="text-form" type="text" name="folder" required placeholder="Folder">
+					<input class="text-form" type="text" name="controller" required placeholder="Controller">
+					<input class="text-form" type="text" name="action" required placeholder="Action">
 					<input class="save-btn" style="margin-top: 185px;" type="submit" name="createPageBtn" value="Сохранить">
 				</form>
 			</div>
