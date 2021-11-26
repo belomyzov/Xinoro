@@ -58,7 +58,7 @@
 		</div>
 
 		<style type="text/css"> 
-			<?php echo file_get_contents("cms_vendor/css/pages.css") ?>
+			<?php echo getRaw("css","pages.css");?>
 		</style>
 	</body>
 </html>
