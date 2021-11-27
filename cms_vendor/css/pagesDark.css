@@ -150,6 +150,9 @@ textarea{
       width: 659px; 
       height: 840px;
 
+      background-color: #222126;
+      color: white;
+      
       border: none;
 }
 
