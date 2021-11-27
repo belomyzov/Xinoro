@@ -22,7 +22,7 @@
 		<div class="item-box">
 			<div class="info-box">
 				<div class="info-box-box">
-					<p class="first-text"><?php echo count(searchPHP()) + + count(searchStyleAndJs("css")) + count(searchStyleAndJs("js")); ?></p>
+					<p class="first-text"><?php echo count(searchPHP()) + count(searchStyleAndJs("css")) + count(searchStyleAndJs("js")); ?></p>
 					<p class="sub-text">Кол-во страниц</p>
 				</div>
 			</div>

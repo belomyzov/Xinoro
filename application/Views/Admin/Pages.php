@@ -1,7 +1,3 @@
-<!--  <?php foreach (searchPHP() as $key => $value) { echo "<option>".$value."</option>"; } ?>
-
-<?php echo getRaw("css","panel.css"); ?>
--->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -65,5 +61,8 @@
 					echo getRaw("css","pagesLight.css");
 			?>
 		</style>
+		<script type="text/javascript">
+			<?php echo file_get_contents("cms_vendor/js/panel.js") ?>
+		</script>
 	</body>
 </html>
