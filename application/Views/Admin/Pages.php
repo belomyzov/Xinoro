@@ -47,7 +47,10 @@
 		<div class="editor-box">
 			<div class="info-box-editor">
 				<form>
-					<textarea></textarea>
+					<textarea> <?php 
+						if(isset($_GET['file']))
+							echo openfile($_GET['file']);
+					 ?> </textarea>
 					<input class="save-btn" type="submit" name="" value="Сохранить">
 				</form>
 			</div>
