@@ -16,12 +16,14 @@
 		static function authorization($isAdminAuth = false)
 		{
 			$_SESSION["isAdminAuth"] = $isAdminAuth;
+			$_SESSION["themMode"] = false;
 		}
 
 		static function getDate()
 		{
 			return [
 				"isAdminAuth" => $_SESSION["isAdminAuth"],
+				"themMode" => $_SESSION["themMode"],
 			];
 		}
 

@@ -33,9 +33,15 @@
 				</div>
 			</div>
 		</div>
-
 		<style type="text/css"> 
-			<?php echo getRaw("css","panel.css"); ?>
+			<?php
+				$_SESSION['themMode'] = true;
+
+				if(session::getDate()["themMode"])
+					echo getRaw("css","panelDark.css"); 
+				else
+					echo getRaw("css","panelLight.css");
+			?>
 		</style>
 	</body>
 </html>
