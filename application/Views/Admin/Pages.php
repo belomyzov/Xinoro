@@ -58,7 +58,12 @@
 		</div>
 
 		<style type="text/css"> 
-			<?php echo getRaw("css","pages.css");?>
+			<?php
+				if(session::getDate()["themMode"])
+					echo getRaw("css","pagesDark.css"); 
+				else
+					echo getRaw("css","pagesLight.css");
+			?>
 		</style>
 	</body>
 </html>
