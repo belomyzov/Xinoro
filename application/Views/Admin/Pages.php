@@ -58,7 +58,7 @@
 
 		<style type="text/css"> 
 			<?php
-				if(session::getDate()["themMode"])
+				if($_SESSION["themMode"])
 					echo getRaw("css","pagesDark.css"); 
 				else
 					echo getRaw("css","pagesLight.css");

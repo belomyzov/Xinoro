@@ -19,8 +19,8 @@
 		public function AdminLoginAction()
 		{
 			# Check if the user is authorized as an administrator, otherwise a redirect will occur
-			if(session::isAuth("isAdminAuth"))
-				header("Location: panel");
+			if(session::isAuth('isAdminAuth') == true)
+				return header("Location: panel");
 
 			$this->requst = ["message" => ""];
 
@@ -41,8 +41,8 @@
 
 		public function PagesAction()
 		{
-			if(session::isAuth("isAdminAuth"))
-				header("Location: panel");
+			if(session::isAuth('isAdminAuth') == false)
+				return header("Location: login");
 
 			if(isset($_POST["createPageBtn"]))
 			{
@@ -57,9 +57,9 @@
 
 		public function PanelAction()
 		{
-			if(session::isAuth("isAdminAuth"))
-				header("Location: panel");
-
+			if(session::isAuth('isAdminAuth') == false)
+				return header("Location: login");
+			
 			$this->view->LoadDesign();
 		}
 	}
