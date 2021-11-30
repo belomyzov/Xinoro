@@ -9,9 +9,26 @@
 
 	class AdminController extends Controller 
 	{
+		protected $requst;
+
 		public function AdminLoginAction()
 		{
-			$this->view->LoadDesign();
+			if(session::isAuth("isAdminAuth"))
+				header("Location: panel");
+
+			$this->requst = ["message" => ""];
+
+			if(isset($_POST["aloginbtn"]))
+			{
+				if($_POST['login'] != "root" && $_POST['password'] != "root")
+					$this->requst = ["message" => "<div class='warning'><p> Access denied </p></div>"];
+				else
+				{
+					session::authorization($isAdminAuth = true);
+					return header("Location: panel");
+				}
+			}
+			$this->view->LoadDesign($this->requst);
 		}
 
 		public function PagesAction()
