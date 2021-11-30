@@ -24,7 +24,7 @@
 					$this->requst = ["message" => "<div class='warning'><p> Access denied </p></div>"];
 				else
 				{
-					session::authorization($isAdminAuth = true);
+					$_SESSION["isAdminAuth"] = true;
 					return header("Location: panel");
 				}
 			}

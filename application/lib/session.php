@@ -13,18 +13,9 @@
 			else return false;
 		}
 
-		static function authorization($isAdminAuth = false)
+		static function authorization()
 		{
-			$_SESSION["isAdminAuth"] = $isAdminAuth;
 			$_SESSION["themMode"] = false;
-		}
-
-		static function getDate()
-		{
-			return [
-				"isAdminAuth" => $_SESSION["isAdminAuth"],
-				"themMode" => $_SESSION["themMode"],
-			];
 		}
 
 		static function logout()
