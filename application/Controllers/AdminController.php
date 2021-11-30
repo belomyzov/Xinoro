@@ -9,15 +9,22 @@
 
 	class AdminController extends Controller 
 	{
+		# The class that is responsible for the performance of the admin panel
+
 		protected $requst;
 
+
+		# The action that is responsible for launching the authorization 
+		# window in the admin panel, all authorization actions take place here
 		public function AdminLoginAction()
 		{
+			# Check if the user is authorized as an administrator, otherwise a redirect will occur
 			if(session::isAuth("isAdminAuth"))
 				header("Location: panel");
 
 			$this->requst = ["message" => ""];
 
+			# User data validation
 			if(isset($_POST["aloginbtn"]))
 			{
 				if($_POST['login'] != "root" && $_POST['password'] != "root")
@@ -28,11 +35,15 @@
 					return header("Location: panel");
 				}
 			}
+			# Load design from view folder (Exemple login.php)
 			$this->view->LoadDesign($this->requst);
 		}
 
 		public function PagesAction()
 		{
+			if(session::isAuth("isAdminAuth"))
+				header("Location: panel");
+
 			if(isset($_POST["createPageBtn"]))
 			{
 				$receivedFolder = strip_tags($_POST['folder']);
@@ -46,6 +57,9 @@
 
 		public function PanelAction()
 		{
+			if(session::isAuth("isAdminAuth"))
+				header("Location: panel");
+
 			$this->view->LoadDesign();
 		}
 	}

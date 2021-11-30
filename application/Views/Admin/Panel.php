@@ -36,7 +36,6 @@
 		<style type="text/css"> 
 			<?php
 				$_SESSION['themMode'] = true;
-
 				if($_SESSION['themMode'])
 					echo getRaw("css","panelDark.css"); 
 				else
