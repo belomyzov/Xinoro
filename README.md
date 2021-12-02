@@ -1,2 +1,2 @@
-# CMS
+# XoheCMS
 CMS
