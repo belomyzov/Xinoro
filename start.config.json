@@ -1,0 +1,22 @@
+{
+	"default":
+	[
+		"core",
+		"config",
+		"vendor",
+		"web"
+	],
+	"config":
+	[
+		"core.yml",
+		"database.yml",
+		"plugins.yml",
+		"setting.yml"
+	],
+	"core":
+	[
+		"theme",
+		"page_editor",
+		"admin_panel"
+	]
+}
