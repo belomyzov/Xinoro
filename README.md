@@ -1,5 +1,7 @@
 <div align="center">
+ 
 # XoheCMS
+ 
 <div>
 
 <div align="center">
@@ -23,6 +25,5 @@
  </div>
  
  <div align="center">
- Hello, this project is just beginning to emerge, if you are interested in this project then put an asterisk (this will help other people find it, which means it will help improve this project). What is the essence of this project? I want to make a convenient editor with the ability to visually display data from different libraries.
-If you are interested, then stay with us and offer your ideas (we will definitely implement them)
+Simple and convenient CMS with support for a variety of technologies (temporary plug)
  </div>
