@@ -89,6 +89,7 @@ function checkfiles($object, $path, $key = "default")
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="core/default_style/default_css/install.css">
+	<link rel="shortcut icon" href="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/logo.png" type="image/x-icon">
 	<title>Xinoro - Установка</title>
 </head>
 <body style="background-color:#78A8E1;">

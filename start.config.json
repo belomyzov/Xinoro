@@ -8,15 +8,29 @@
 	],
 	"config":
 	[
-		"core.yml",
-		"database.yml",
-		"plugins.yml",
-		"setting.yml"
+		"core.json",
+		"database.json",
+		"plugins.json",
+		"setting.json"
 	],
 	"core":
 	[
 		"theme",
 		"page_editor",
-		"admin_panel"
+		"admin_panel",
+		"default_style"
+	],
+	"default_style":
+	[
+		"default_css",
+		"default_js"
+	],
+	"default_css":
+	[
+		"install.css"
+	],
+	"default_js":
+	[
+		"install.js"
 	]
 }
