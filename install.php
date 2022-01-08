@@ -33,6 +33,9 @@ if(isset($_GET['installing']))
 	install($object,__DIR__."/");
 	install($object,"core/","core");
 	install($object,"config/","config");
+	install($object,"core/default_style/","default_style");
+	install($object,"core/default_style/default_css/","default_css");
+	install($object,"core/default_style/default_js/","default_js");
 }
 
 # Installer, accepts installation paths and data keys
@@ -70,12 +73,12 @@ function checkfiles($object, $path, $key = "default")
 	return true;
 }
 
-function dlog($mixed = null) 
-{
-  echo '<pre>';
-  var_dump($mixed);
-  echo '</pre>';
-}
+// function dlog($mixed = null) 
+// {
+//   echo '<pre>';
+//   var_dump($mixed);
+//   echo '</pre>';
+// }
 
 
 ?>
@@ -85,11 +88,13 @@ function dlog($mixed = null)
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="core/default_style/default_css/install.css">
 	<title>Xinoro - Установка</title>
 </head>
-<body>
-		<div class="container">
+<body style="background-color:#78A8E1;">
+		<div id="base-box" class="container">
 			<div class="logo"><img src="logo.png"></div>
+			<div class="installing-section">
 			<?php
 				if(!isset($_GET['installing']))
 					echo '<div class="adaptivny-slayder">
@@ -113,7 +118,7 @@ function dlog($mixed = null)
 								</div>
 								<div class="description">Добро пожаловать в мастер установки Xinoro,<br>
 								следуйте инструкциям и у вас всё получится</div>
-								<div class="btn">Далее</div>';
+								<div onclick="install();" class="btn">Далее</div>';
 
 				if(isset($_GET['installing']))
 				{
@@ -143,18 +148,33 @@ function dlog($mixed = null)
 							echo '<div class="statuscheck"></div>';
 						else
 							echo '<div class="statuscheck red"></div>';
-						echo '<div class="checkedtext">Загрузка модулей</div>
-					</div><div class="btn">Далее</div>';
+						echo '<div class="checkedtext">Загрузка модулей</div></div>';
+
+					// install design
+					echo '<div class="statusbox">
+						<div class="statuscheck"></div>
+						<div class="checkedtext">Загрузка оформления</div></div><div class="btn">Далее</div>';
 
 				}
 			?>
 		</div>
+		</div>
 </body>
-</html>
-
-<style type="text/css">
+<script type="text/javascript">
+	function install()
+	{
+		window.location.href = '?installing';
+	}
+</script>
+<style>
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
 
+
+	.installing-section
+	{
+		height: auto;
+		padding-bottom: 5%;
+	}
 
 	.statusbox
 	{
@@ -168,8 +188,8 @@ function dlog($mixed = null)
 		height: 15px;
 		background: #60D06C;
 		display: block;
-    border-radius: 10px;
-    margin-top: 20px;
+	border-radius: 10px;
+	margin-top: 20px;
 	}
 
 	.checkedtext
@@ -198,11 +218,11 @@ function dlog($mixed = null)
 		width: 280px;
 		height: 48px;
 		display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4%;
 
-    font-family: Montserrat;
+	font-family: Montserrat;
 		font-style: normal;
 		font-weight: bold;
 		font-size: 18px;
@@ -219,15 +239,15 @@ function dlog($mixed = null)
 	.container
 	{
 		width: 550px;
-		height: 600px;
+		height: auto;
 		background: #FFFFFF;
 		box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
 		border-radius: 5px;
 
 		display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
 	}
 
 	.logo
@@ -238,10 +258,10 @@ function dlog($mixed = null)
 
 	.adaptivny-slayder 
 	{
-  	position: relative;
-  	width: 400px;
-  	height: 300px;
-  	margin: 20px auto;
+		position: relative;
+		width: 400px;
+		height: 300px;
+		margin: 20px auto;
 	}
 
 	.adaptivny-slayder input[name="kadoves"] {
@@ -324,3 +344,4 @@ function dlog($mixed = null)
 	  transform: translateX(-200%);
 	}
 </style>
+</html>
