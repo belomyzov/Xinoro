@@ -1,0 +1,12 @@
+//
+//       Xinoro cms
+//  auto-generate database.yml
+//
+
+{
+  host: "null",
+  dbname: "null",
+  username: "null",
+  password: "null",
+  port: "null"
+}
