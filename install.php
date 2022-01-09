@@ -97,7 +97,7 @@ function checkfiles($object, $path, $key = "default")
 			<div class="logo"><img src="logo.png"></div>
 			<div class="installing-section">
 			<?php
-				if(!isset($_GET['installing']))
+				if(!isset($_GET['installing']) && !isset($_GET['dbinstalling']))
 					echo '<div class="adaptivny-slayder">
 						  <input type="radio" name="kadoves" id="slaid1" checked>
 						  <input type="radio" name="kadoves" id="slaid2">
@@ -119,7 +119,7 @@ function checkfiles($object, $path, $key = "default")
 								</div>
 								<div class="description">Добро пожаловать в мастер установки Xinoro,<br>
 								следуйте инструкциям и у вас всё получится</div>
-								<div onclick="install();" class="btn">Далее</div>';
+								<div onclick="repath(1);" class="btn">Далее</div>';
 
 				if(isset($_GET['installing']))
 				{
@@ -154,22 +154,100 @@ function checkfiles($object, $path, $key = "default")
 					// install design
 					echo '<div class="statusbox">
 						<div class="statuscheck"></div>
-						<div class="checkedtext">Загрузка оформления</div></div><div class="btn">Далее</div>';
+						<div class="checkedtext">Загрузка оформления</div></div><div onclick="repath(2);" class="btn">Далее</div>';
 
+				}
+
+				if(isset($_GET['dbinstalling']))
+				{
+					echo '<div class="description" style="margin-top:1%">Подключение к базе данных</div>
+						<form>
+							<input placeholder="localhost" id="localhost" value="localhost" type="input"></input>
+							<input placeholder="dbname" id="dbname" type="input"></input>
+							<input placeholder="username" id="username" type="input"></input>
+							<input placeholder="password" id="password" type="input"></input>
+							<input placeholder="port(Не обязательно)" id="port" value="1433" type="input"></input>
+						</form>';
+
+						if(isset($_GET['host']))
+						{
+							$mysqli = new mysqli($_GET['host'], $_GET['un'], $_GET['ps'], $_GET['bn'], $_GET['port']);
+
+							if ($mysqli->connect_error) 
+							{
+								echo '<div style="margin-left:18%; margin-top:15px; text-align:center; margin-right:20%">Ошибка подключения (' . $mysqli->connect_errno . ') '. $mysqli->connect_error."</div>";
+							}
+							else
+							{
+								$json_db = file_get_contents("config/database.json");
+								$object_db = json_decode($json_db,true);
+
+								$object_db['host'] = $_GET['host'];
+								$object_db['dbname'] = $_GET['bn'];
+								$object_db['username'] = $_GET['un'];
+								$object_db['password'] = $_GET['ps'];
+								$object_db['port'] = $_GET['port'];
+
+								file_put_contents('config/database.json', json_encode($object_db));
+								
+								header('Location: admin');
+							}
+						}
+						
+						echo '<div onclick="repath(3);" class="btn">Далее</div>
+					';
 				}
 			?>
 		</div>
 		</div>
 </body>
 <script type="text/javascript">
-	function install()
+	function repath(key)
 	{
-		window.location.href = '?installing';
+		let key_path;
+		switch(key)
+		{
+			case 1: 
+				key_path = "installing"
+			break;
+			case 2: 
+				key_path = "dbinstalling"
+			break;
+			case 3:
+
+				key_path = "dbinstalling&host="+document.getElementById("localhost").value+"&un="+document.getElementById("username").value+"&ps="+document.getElementById("password").value+"&bn="+document.getElementById("dbname").value+"&port="+document.getElementById("port").value;
+
+			break;
+		}
+		window.location.href = '?'+key_path;
 	}
 </script>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
 
+
+	input
+	{
+		background-color: #F6F5F9;
+		width: 292px;
+		height: 34px;
+		border-radius: 5px;
+		border: none;
+		margin-left: 22%;
+		margin-top: 1%;
+		padding-left: 10px;
+
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		/* identical to box height */
+
+		text-align: left;
+
+		color: #595959;
+	}
 
 	.installing-section
 	{
