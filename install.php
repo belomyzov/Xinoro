@@ -94,7 +94,7 @@ function checkfiles($object, $path, $key = "default")
 </head>
 <body style="background-color:#78A8E1;">
 		<div id="base-box" class="container">
-			<div class="logo"><img src="logo.png"></div>
+			<div class="logo"><img src="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/logoX.png"></div>
 			<div class="installing-section">
 			<?php
 				if(!isset($_GET['installing']) && !isset($_GET['dbinstalling']))
@@ -111,9 +111,9 @@ function checkfiles($object, $path, $key = "default")
 						   
 						  <div class="adaptivny-slayder-lasekun">
 						  	<div class="abusteku-deagulus">
-						  		<img src="image1.png"/>
-						  		<img src="image1.png"/>
-						  		<img src="image1.png"/>
+						  		<img src="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/img1.png"/>
+						  		<img src="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/img2.png"/>
+						  		<img src="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/img3.png"/>
 						  	</div>
 			  			</div>
 								</div>
