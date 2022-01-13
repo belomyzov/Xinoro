@@ -1,0 +1,26 @@
+{
+	"main-menu":
+	{
+		"1":
+		{
+			"icon":"Main-Icon.png",
+			"url":"page-url"
+		},
+		"2":
+		{
+			"icon":"Main-Page-Icon.png",
+			"url":"page-url"
+		},
+		"3":
+		{
+			"icon":"Main-User-Icon.png",
+			"url":"page-url"	
+		},
+		"4":
+		{
+			"icon":"Main-Setting-Icon.png",
+			"url":"page-url"	
+		},
+		"item-count": 3
+	}
+}

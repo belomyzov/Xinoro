@@ -191,6 +191,10 @@ function checkfiles($object, $path, $key = "default")
 								file_put_contents('config/database.json', json_encode($object_db));
 								
 								header('Location: admin');
+								
+								// delete install files
+								unlink('install.php');
+								unlink('start.config.json');
 							}
 						}
 						
