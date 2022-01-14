@@ -50,7 +50,7 @@ function install($object, $path, $gitFolder, $key = "default")
 			if(file_exists($path.$value))
 				continue;
 
-			file_put_contents($path.$value, file_get_contents("https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/".$value));
+			file_put_contents($path.$value, file_get_contents("https://raw.githubusercontent.com/xoheveras/Xinoro/main/".$gitFolder."/".$value));
 		}
 	}
 }
@@ -188,7 +188,7 @@ function checkfiles($object, $path, $key = "default")
 								#delete install files
 								
 								# install other files
-								install($object,__DIR__."/","default_files");
+								install($object,__DIR__."/","","default_files");
 								
 								// delete files
 								unlink('install.php');
