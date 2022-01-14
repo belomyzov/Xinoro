@@ -21,12 +21,12 @@ $object = json_decode($json,true);
 if(isset($_GET['installing']))
 {
 	#default
-	install($object,__DIR__."/");
-	install($object,"core/","core");
-	install($object,"config/","config");
+	install($object,__DIR__."/","default_config");
+	install($object,"core/","core","default_config");
+	install($object,"config/","config","default_config");
 
 	#core
-	install($object,"core/core/","xinoro_core");
+	install($object,"core/core/","xinoro_core","default_config");
 }
 
 # Installer, accepts installation paths and data keys
