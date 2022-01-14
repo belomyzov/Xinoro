@@ -22,11 +22,15 @@ if(isset($_GET['installing']))
 {
 	#default
 	install($object,__DIR__."/","default_config");
-	install($object,"core/","core","default_config");
-	install($object,"config/","config","default_config");
+	install($object,"core/","default_config","core");
+	install($object,"config/","default_config","config");
 
 	#core
-	install($object,"core/core/","xinoro_core","default_config");
+	install($object,"core/core/","default_config/default_php","xinoro_core");
+	install($object,"core/views/","default_config/default_php","xinoro_view");
+	install($object,"core/views/admin/","default_config/default_php","xinoro_admin_panel");
+	install($object,"core/controllers/","default_config/default_php","xinoro_admin_panel_c");
+	install($object,"core/models/","default_config/default_php","xinoro_admin_panel_m");
 }
 
 # Installer, accepts installation paths and data keys
@@ -46,7 +50,7 @@ function install($object, $path, $gitFolder, $key = "default")
 			if(file_exists($path.$value))
 				continue;
 
-			file_put_contents($path.$value, file_get_contents("https://raw.githubusercontent.com/xoheveras/Xinoro/main/".$gitFolder."/".$value));
+			file_put_contents($path.$value, file_get_contents("https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/".$value));
 		}
 	}
 }
