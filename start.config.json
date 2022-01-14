@@ -34,5 +34,13 @@
 		"controller.php",
 		"model.php",
 		"db.php"
+	],
+	"xinoro_view":
+	[
+		"admin"	
+	],
+	"xinoro_admin_panel":
+	[
+		"panel.php"	
 	]
 }
