@@ -42,5 +42,13 @@
 	"xinoro_admin_panel":
 	[
 		"panel.php"	
+	],
+	"xinoro_admin_panel_c":
+	[
+		"adminController.php"	
+	],
+	"xinoro_admin_panel_m":
+	[
+		"adminModel.php"	
 	]
 }
