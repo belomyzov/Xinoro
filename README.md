@@ -31,9 +31,12 @@ Simple and convenient CMS with support for a variety of technologies (temporary 
  
 
 
+ 
  ## Install
  
  ### index.php
+ 
+ <div aling="left">
  
  ```html
 # import modules
@@ -46,8 +49,12 @@ require_once("core/core/db.php");
 # create router and start xinoro
 $router = new Router();
  ```
+  
+ </div>
  
   ### .htaccess
+ 
+  <div aling="left">
  
  ```html
  
@@ -58,4 +65,4 @@ $router = new Router();
  RewriteRule .* index.php [L]
 
  ```
- 
+  </div>
