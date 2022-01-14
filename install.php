@@ -30,7 +30,7 @@ if(isset($_GET['installing']))
 }
 
 # Installer, accepts installation paths and data keys
-function install($object, $path, $key = "default")
+function install($object, $path, $gitFolder, $key = "default")
 {
 	foreach($object[$key] as $value)
 	{
@@ -46,7 +46,7 @@ function install($object, $path, $key = "default")
 			if(file_exists($path.$value))
 				continue;
 
-			file_put_contents($path.$value, file_get_contents("https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/".$value));
+			file_put_contents($path.$value, file_get_contents("https://raw.githubusercontent.com/xoheveras/Xinoro/main/".$gitFolder."/".$value));
 		}
 	}
 }
