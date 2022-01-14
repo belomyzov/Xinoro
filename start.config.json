@@ -4,7 +4,10 @@
 		"core",
 		"config",
 		"vendor",
-		"web",
+		"web"
+	],
+	"default_files":
+	[
 		"index.php",
 		".htaccess"
 	],
