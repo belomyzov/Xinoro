@@ -1,0 +1,6 @@
+{
+	"routes":[
+		["admin/panel","admin","panel"],
+		["","index","index"]
+	]
+}
