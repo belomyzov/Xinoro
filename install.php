@@ -157,7 +157,7 @@ function checkfiles($object, $path, $key = "default")
 							<input placeholder="dbname" id="dbname" type="input"></input>
 							<input placeholder="username" id="username" type="input"></input>
 							<input placeholder="password" id="password" type="input"></input>
-							<input placeholder="port(Не обязательно)" id="port" value="1433" type="input"></input>
+							<input placeholder="port(Не обязательно)" id="port" value="3306" type="input"></input>
 						</form>';
 
 						if(isset($_GET['host']))
