@@ -1,26 +1,16 @@
 <?php
 
 /* 
-
 	README[RU] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 	Автоматический генератор файлов для cms xinoro, просто запустите его и
 	следуйте инструкциям на экране.Таким образом, вы можете легко установить
 	эту cms в свой проект.
-
 	Вы можете представить идеи по улучшению cms в профиле проекта на github.
-
 	README[EN] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 	Auto file generator for cms xinoro, just run it and
 	follow the instructions on the screen.Thus, you can easily install
 	this cms in your project.
-
  	You can submit ideas for improving the cms in the project's github profile.
-
-
-
 */
 
 # We pull out the necessary data from the installation wizard
@@ -30,12 +20,13 @@ $object = json_decode($json,true);
 # Installing the received files
 if(isset($_GET['installing']))
 {
+	#default
 	install($object,__DIR__."/");
 	install($object,"core/","core");
 	install($object,"config/","config");
-	install($object,"core/default_style/","default_style");
-	install($object,"core/default_style/default_css/","default_css");
-	install($object,"core/default_style/default_js/","default_js");
+
+	#core
+	install($object,"core/core/","xinoro_core");
 }
 
 # Installer, accepts installation paths and data keys

@@ -5,7 +5,8 @@
 		"config",
 		"vendor",
 		"web",
-		"index.php"
+		"index.php",
+		".htaccess"
 	],
 	"config":
 	[
@@ -13,26 +14,21 @@
 		"database.json",
 		"plugins.json",
 		"setting.json",
-		"menu.json"
+		"menu.json",
+		"routes.json"
 	],
 	"core":
 	[
-		"theme",
-		"page_editor",
-		"admin_panel",
-		"default_style"
+		"core",
+		"views",
+		"models",
+		"controllers"
 	],
-	"default_style":
+	"xinoro_core":
 	[
-		"default_css",
-		"default_js"
-	],
-	"default_css":
-	[
-		"install.css"
-	],
-	"default_js":
-	[
-		"install.js"
-	],
+		"router.php",
+		"view.php",
+		"controller.php",
+		"model.php"
+	]
 }
