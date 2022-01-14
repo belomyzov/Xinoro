@@ -32,6 +32,7 @@
 		"router.php",
 		"view.php",
 		"controller.php",
-		"model.php"
+		"model.php",
+		"db.php"
 	]
 }
