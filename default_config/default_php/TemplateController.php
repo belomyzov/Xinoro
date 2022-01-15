@@ -5,7 +5,7 @@
 		GitHub https://github.com/xoheveras/xinoro
 	*/
 
-	class $change$Controller extends Model 
+	class $change$Controller extends Controller 
 	{
 		#input_region#
 	}
