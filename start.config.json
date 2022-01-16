@@ -53,5 +53,13 @@
 	"xinoro_admin_panel_m":
 	[
 		"adminModel.php"	
+	],
+	"xinoro_admin_css":
+	[
+		"panel.css"	
+	],
+	"xinoro_admin_js":
+	[
+		"panel.js"	
 	]
 }
