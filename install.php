@@ -92,7 +92,7 @@ function checkfiles($object, $path, $key = "default")
 	<link rel="shortcut icon" href="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/logo.png" type="image/x-icon">
 	<title>Xinoro - Установка</title>
 </head>
-<body style="background-color:#78A8E1;">
+<body style="background-color:#171C28;">
 		<div id="base-box" class="container">
 			<div class="logo"><img src="https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_img/logoX.png"></div>
 			<div class="installing-section">
@@ -287,7 +287,7 @@ function checkfiles($object, $path, $key = "default")
 		line-height: 17px;
 		/* identical to box height */
 		/*text-align: center;*/
-		color: #595959;
+		color: #C6C6C6;
 		margin-top: 20px;
 		margin-left: 20px;
 	}
@@ -299,7 +299,7 @@ function checkfiles($object, $path, $key = "default")
 
 	.btn
 	{
-		background: #595959;
+		background: #5688B7;
 		border-radius: 5px;
 		width: 280px;
 		height: 48px;
@@ -326,7 +326,7 @@ function checkfiles($object, $path, $key = "default")
 	{
 		width: 550px;
 		height: auto;
-		background: #FFFFFF;
+		background: #1B202D;
 		box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
 		border-radius: 5px;
 
@@ -369,20 +369,19 @@ function checkfiles($object, $path, $key = "default")
 	  cursor: pointer;
 	  margin: 0 3px;
 	  border-radius: 50%;
-	  background-color: #738290;
-	  background-color: #C4C4C4;
+	  background-color: #C6C6C6;
 	}
 
 	#slaid1:checked~.kadoves label[for="slaid1"] {
-	  background-color: #595959;
+	  background-color: #5688B7;
 	}
 
 	#slaid2:checked~.kadoves label[for="slaid2"] {
-	  background-color: #595959;
+	  background-color: #5688B7;
 	}
 
 	#slaid3:checked~.kadoves label[for="slaid3"] {
-	  background-color: #595959;
+	  background-color: #5688B7;
 	}
 
 	.adaptivny-slayder-lasekun {
@@ -414,7 +413,7 @@ function checkfiles($object, $path, $key = "default")
 		line-height: 22px;
 		text-align: center;
 
-		color: #393939;
+		color: #C6C6C6;
 
 	}
 
