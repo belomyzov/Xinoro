@@ -1,0 +1,268 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: #171C28;
+	overflow-x: hidden;
+}
+
+.box-add
+{
+	margin-left: auto;
+	width: 382px;
+	height: 100vh;
+	background: #1B202D;
+	border-radius: 5px;
+}
+
+.btn-box
+{
+
+	margin-top: 20px;
+	width: 496px;
+	height: 60px;
+
+	text-align: center;
+
+	margin-left: 0;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 60px;
+
+	color: #6D7587;
+
+	cursor: pointer;
+
+	background: #1B202D;
+	border-radius: 5px;
+}
+
+.tabs
+{
+	display: flex;
+}
+
+textarea
+{
+	width: 496px;
+	height: 629px;
+
+	color: #C6C6C6;
+
+	border: none;
+
+	background: #1B202D;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.tab-active
+{
+	background: #1B202D;
+	box-shadow: none;
+}
+
+.tabs-box
+{
+	width: 120px;
+	height: 45px;
+
+	margin-right: 5px;
+
+	background: #171C28;
+	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+	border-radius: 5px 5px 0px 0px;
+
+	text-align: center;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 45px;
+	/* identical to box height */
+
+
+	color: #C6C6C6;
+
+}
+
+
+.back-box
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	/* identical to box height */
+
+	padding-bottom: 20px;
+
+	color: #C6C6C6;
+}
+
+.editor-box
+{
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+.create-page-btn
+{
+	width: 292px;
+	height: 35px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 35px;
+	cursor: pointer;
+	/* identical to box height */
+
+
+	color: #FFFFFF;
+	margin-left: 12%;
+
+	text-align: center;
+
+	background: #5688B7;
+	border-radius: 5px;
+}
+
+input
+{
+	width: 292px;
+	height: 34px;
+
+	border: none;
+	padding-left: 5px;
+	margin-bottom: 10px;
+	margin-left: 12%;
+
+	color: white;
+
+	background: #141720;
+	border-radius: 5px;
+}
+
+.label-func
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 80px;
+
+	text-align: center;
+
+	color: #C6C6C6;
+}
+
+.url,.controller,.action
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+
+	color: #C6C6C6;
+}
+
+
+.info-box
+{
+	margin-top: 20px;
+	margin-left: 3%;
+}
+
+.buttons
+{
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.page
+{
+	width: 353px;
+	height: 48px;
+	background: #1B202D;
+	border-radius: 5px;
+	display: flex;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.label
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #C6C6C6;
+
+}
+
+.addpages
+{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 30px;
+	/* identical to box height */
+
+	cursor: pointer;
+
+	margin-left: 61%;
+
+	color: #FFFFFF;
+}
+
+.logo
+{
+	margin-top: 15px;
+	margin-left: 3%
+}
+
+.nav
+{
+	margin-right: auto;
+	margin-left: 35%;
+	margin-top: 28px;
+}
+
+li
+{
+	display: inline;
+	margin-right: 20px;
+}
+
+header
+{
+	width: 100%;
+	background: #171C28;
+	height: 80px;
+	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+	border-radius: 0px;
+	display: flex;
+}
+
+content
+{
+	display: flex;
+}
