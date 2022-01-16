@@ -6,10 +6,12 @@
 	class Router
 	{
 		protected $routes;
+		protected $settings;
 		function __construct()
 		{
 			# import routes
 			$this->routes = json_decode(file_get_contents("config/routes.json"),true);
+			$this->settings = json_decode(file_get_contents("config/setting.json"),true);
 			$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 			echo $this->checkPage();
 		}
@@ -38,7 +40,7 @@
 						$this->runPage($url[1],$url[2]);
 						break;
 					}
-					else echo "404 page";
+					// else echo "404 page";
 				}
 			}
 		}
@@ -51,7 +53,7 @@
 		{
 			$page_controller = $controller."Controller";
 			$page_action = $action."Action";
-
+			echo "<base href='".$this->settings['base_url']."'>"; # Очень важно, глобальный маршрут подкючения стилей
 			require_once("core/controllers/".$page_controller.".php");
 			$pageController = new $page_controller($controller, $action);
 			$pageController->$page_action();
