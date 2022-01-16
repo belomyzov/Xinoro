@@ -24,6 +24,7 @@ if(isset($_GET['installing']))
 	install($object,__DIR__."/","default_config");
 	install($object,"core/","default_config","core");
 	install($object,"config/","default_config","config");
+	install($object,"vendor/","default_config","vendor");
 
 	#core
 	install($object,"core/core/","default_config/default_php","xinoro_core");
@@ -31,6 +32,10 @@ if(isset($_GET['installing']))
 	install($object,"core/views/admin/","default_config/default_php","xinoro_admin_panel");
 	install($object,"core/controllers/","default_config/default_php","xinoro_admin_panel_c");
 	install($object,"core/models/","default_config/default_php","xinoro_admin_panel_m");
+	
+	#vendor
+	install($object,"vendor/css/","default_config/default_css","xinoro_admin_css");
+	install($object,"vendor/js/","default_config/default_js","xinoro_admin_js");
 }
 
 # Installer, accepts installation paths and data keys
