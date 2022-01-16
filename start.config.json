@@ -3,8 +3,7 @@
 	[
 		"core",
 		"config",
-		"vendor",
-		"web"
+		"vendor"
 	],
 	"default_files":
 	[
@@ -41,7 +40,11 @@
 	],
 	"xinoro_admin_panel":
 	[
-		"panel.php"	
+		"panel.php",
+		"editor.php",
+		"setting.php",
+		"content.php",
+		"database"
 	],
 	"xinoro_admin_panel_c":
 	[
