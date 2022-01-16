@@ -197,7 +197,7 @@ function checkfiles($object, $path, $key = "default")
 								unlink('install.php');
 								unlink('start.config.json');
 								
-								header("location: admin");
+								header("location: admin/panel");
 							}
 						}
 						
