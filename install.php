@@ -185,12 +185,10 @@ function checkfiles($object, $path, $key = "default")
 
 								file_put_contents('config/database.json', json_encode($object_db));
 								
-								#delete install files
-								
 								# install other files
-								install($object,__DIR__."/","","default_files");
+								install($object,__DIR__."/","default_config/default_php","default_files");
 								
-								// delete files
+								#delete install files
 								unlink('install.php');
 								unlink('start.config.json');
 								
