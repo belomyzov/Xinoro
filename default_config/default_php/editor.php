@@ -15,12 +15,7 @@
 			</div>
 		</header>
 		<content>
-<!-- 			<?php 
-			echo "<pre>";
-			var_dump($_SERVER);
-			echo "</pre>";
-			 ?> -->
-			<iframe src="http://<?php echo $_SERVER['HTTP_HOST']; ?><?php echo json_decode(file_get_contents("config/setting.json"),true)['base_url']; ?><?php echo $_GET['c']."/".$_GET['a'] ?>" width="1200px" height="895px" align="left">
+			<iframe src="http://<?php echo $_SERVER['HTTP_HOST']; ?><?php echo json_decode(file_get_contents("config/setting.json"),true)['base_url']; ?><?php echo $_GET['c']."/".$_GET['a'] ?>" width="110%" height="895px" align="left">
 			    Ваш браузер не поддерживает плавающие фреймы!
 			</iframe>
 			<div class="editor-box">
@@ -31,8 +26,27 @@
 					<div id="t4" class="tabs-box">Store</div>
 				</div>
 				<form method='POST' action=''>
-					<textarea name="file"><?php echo file_get_contents("core/views/".$_GET['c']."/".$_GET['a'].".php"); ?></textarea>
+					<!-- t1 -->
+ 					<textarea name="file"><?php echo file_get_contents("core/views/".$_GET['c']."/".$_GET['a'].".php"); ?></textarea>
 					<input type='submit' class="btn-box" name='savepages' value='Обновить'>
+					<!-- t2 -->
+<!-- 					<?php 
+						if(is_file("core/views/".$_GET['c']."/".$_GET['a']."_style.json")) 
+						{
+							$include_file = json_decode(file_get_contents("core/views/".$_GET['c']."/".$_GET['a']."_style.json"),true);
+							foreach($include_file["css"] as $value)
+							{
+							echo '
+								<div class="style-box">
+									<div class="style-label">'.$value.'</div>
+									<div class="style-edit-btn">Edit</div>
+									<div class="style-delete-btn">Удалить</div>
+								</div>
+							';
+							}
+						}
+					?>
+					<div class="style-box style-label create-style-btn">Создать</div> -->
 				</form>
 			</div>
 		</content>
