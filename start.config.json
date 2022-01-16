@@ -49,7 +49,7 @@
 		"editor.php",
 		"setting.php",
 		"content.php",
-		"database"
+		"database.php"
 	],
 	"xinoro_admin_panel_c":
 	[
