@@ -235,7 +235,7 @@ function checkfiles($object, $path, $key = "default")
 
 	input
 	{
-		background-color: #F6F5F9;
+		background-color: #171C28;
 		width: 292px;
 		height: 34px;
 		border-radius: 5px;
