@@ -107,9 +107,55 @@ textarea
 	color: #C6C6C6;
 }
 
+.style-box
+{
+	display: flex;
+	margin-top: 15px;
+	text-align: center;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 45px;
+	/* identical to box height */
+}
+.style-label
+{
+	width: 245px;
+	height: 48px;
+	color: #A6A7AA;
+
+	background: #1B202D;
+	border-radius: 5px;
+}
+.style-edit-btn,.style-delete-btn
+{
+	width: 120px;
+	height: 48px;
+	margin-left: 5px;
+	color: #A6A7AA;
+
+	background: #1B202D;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.style-delete-btn
+{
+	background: #864141;
+	color: #FFFFFF;
+}
+
+.create-style-btn
+{
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+
 .editor-box
 {
-	padding-left: 50px;
+	padding-left: 80px;
 	padding-top: 20px;
 }
 
