@@ -4,7 +4,7 @@
 		["admin/content","admin","content"],
 		["admin/editor","admin","editor"],
 		["admin/database","admin","database"],
-		["admin/setting","admin","setting"]
+		["admin/setting","admin","setting"],
 		["","index","index"]
 	]
 }
