@@ -27,11 +27,4 @@
  <div align="center">
 Simple and convenient CMS with support for a variety of technologies (temporary plug)
  </div>
- 
- 
 
-
- 
- ## Install
- 
-  Start install.php
