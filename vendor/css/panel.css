@@ -263,6 +263,19 @@ input
 
 }
 
+/* Modal-box */
+
+.modal-box
+{
+	z-index: 10;
+	background-color: black;
+	width: 100%;
+}
+
+
+/* Modal-box end */
+
+
 .addpages
 {
 	font-family: Montserrat;

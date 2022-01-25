@@ -13,7 +13,7 @@
 		{
 			if(isset($_GET['createpage']))
 			{
-				$this->model->createPage($_GET['u'],$_GET['c'],$_GET['a']);
+				$this->model->createPage($_GET['u'],$_GET['c'],$_GET['a'],$_GET['t']);
 			}
 
 			$this->view->LoadDesign();
@@ -41,15 +41,12 @@
 		}
 
 		
-				function settingAction()
-				{
-					$this->view->LoadDesign();
-				}
-
-				#input_region#
-			
-			
-			
+		function settingAction()
+		{
+			$this->view->LoadDesign();
+		}
+		
+		#input_region#	
 	}
 
 ?> 

@@ -45,16 +45,41 @@
 					?>
 				</div>
 			</div>
-			<div class="modal-box">
-				<div id="create-page-controll" class="box-add">
-					<div class="label-func">Создание страницы</div>
-					<input type="text" id="url" placeholder="Url">
-					<input type="text" id="controller" placeholder="Controller">
-					<input type="text" id="action" placeholder="Action">
-					<div onclick="createPage();" class="create-page-btn">Создать</div>
-				</div>
-			</div>
+			<style type="text/css">
+				.modal-box
+				{
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(0, 0, 0, 0.3);;
+					width: 100%;
+					height: 100%;
+				}
+
+				.box-add
+				{
+					margin: auto;
+					margin-top: 10%;
+					width: 382px;
+					height: 343px;
+					background: #171C28;
+					box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+					border-radius: 5px;
+				}
+			</style>
 		</content>
+		<div id="create-page-controll" class="modal-box">
+			<div class="box-add">
+				<div class="label-func">Создание страницы</div>
+				<input type="text" id="url" placeholder="Url">
+				<input type="text" id="controller" placeholder="Controller">
+				<input type="text" id="action" placeholder="Action">
+				<input type="text" id="title_page" placeholder="Название страницы">
+				<div onclick="createPage();" class="create-page-btn">Создать</div>
+			</div>
+		</div>
 	</body>
 </html>
 <script type="text/javascript">
@@ -62,6 +87,7 @@
 	let inputUrl = document.getElementById("url");
 	let inputController = document.getElementById("controller");
 	let inputAction = document.getElementById("action");
+	let inputTitle = document.getElementById("title_page");
 	pageControll.hidden = true;
 
 	function openPageControll()
@@ -71,7 +97,7 @@
 
 	function createPage()
 	{
-		window.location.href = 'admin/panel?createpage&u='+inputUrl.value+'&c='+inputController.value+'&a='+inputAction.value;
+		window.location.href = 'admin/panel?createpage&u='+inputUrl.value+'&c='+inputController.value+'&a='+inputAction.value+'&t='+inputTitle.value;
 	}
 
 	function openInEditor(contoller, action)

@@ -9,9 +9,9 @@
 
 	class adminModel extends Model 
 	{
-		function createPage($url, $controller, $action)
+		function createPage($url, $controller, $action, $title)
 		{
-			if(empty($url) or empty($controller) or empty($action))
+			if(empty($url) or empty($controller) or empty($action) or empty($title))
 				return;
 
 			$TemplateController = file_get_contents('https://raw.githubusercontent.com/xoheveras/Xinoro/main/default_config/default_php/TemplateController.php');
@@ -53,7 +53,7 @@
     			file_put_contents("core/views/".$controller."/".$action.".php", $TemplateView);
 
     		$routes = json_decode(file_get_contents("config/routes.json"),true);
-    		array_push($routes["routes"],array($url,$controller,$action));
+    		array_push($routes["routes"],array($url,$controller,$action,$title));
     		file_put_contents("config/routes.json", json_encode($routes));
 
     		header("location: panel");
