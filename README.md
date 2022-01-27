@@ -3,7 +3,7 @@
 # Xinoro
  
 <div>
-
+edrftgyhujikolp;
 <div align="center">
 
  <a href="https://github.com/xoheveras"> ![Developer](https://img.shields.io/badge/Developed%20by-xoheveras(Egor%20Udovin)-blueviolet) </a> 
